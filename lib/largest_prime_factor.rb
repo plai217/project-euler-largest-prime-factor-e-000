@@ -7,14 +7,12 @@ def largest_prime_factor(num)
 end
 
 def prime(num)
-
-  Math.sqrt(num).ceil.downto(4) do |x|
-    if num % (x-1) == 0 
+  Math.sqrt(num).to_i.downto(2) do |x|
+    if num % (x) == 0 
       return false
     end
   end
   return true
-
 end
 
 
@@ -29,5 +27,3 @@ def findfactors(num)
   end
   factors
 end
-
-largest_prime_factor(490)
